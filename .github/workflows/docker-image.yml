@@ -14,7 +14,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
+    - name: Build and push the Docker image
       run:  docker build . --file Dockerfile --tag logicfocus/docker-image-autobuild:latest
-    - name: push the Docker image
-      run: docker login -u logicfocus -p ${{ secret DOCKER_TOKEN }} && docker push logicfocus/docker-image-autobuild:latest  
+     
