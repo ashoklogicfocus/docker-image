@@ -18,4 +18,4 @@ jobs:
         run:  docker build . --file Dockerfile --tag logicfocus/docker-image-autobuild:latest
 
       - name: push the Docker image
-        run:  dockerhub login -u logicfocus push ${{ secrets DOCKER_TOKEN }} && docker image push/logicfocus docker-image-autobuild:latest
+        run:  docker login logicfocus push -u ${{ secrets DOCKER_TOKEN }} && docker image push/logicfocus docker-image-autobuild:latest
