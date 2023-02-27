@@ -1,12 +1,13 @@
- name: ci
 
+
+       name: ci
  on:
     push:
       branches:
-
         - master
- jobs:
-   build:
+    jobs:
+        
+    build:
 
          - name: Checkout project
            uses: actions/checkout@v2
@@ -22,6 +23,16 @@
            uses: ishworkh/docker-image-artifact-upload@v1
            with:
                           image: "test_image:latest"
+
+
+
+
+
+
+
+
+
+
 
 
 
