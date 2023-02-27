@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 66ba00ad3de8/docker-image-autobuild:latest
     - name: push the Docker image
-      run: docker login -u 66ba00ad3de8 -p ${{ secrets DOCKER_TOKEN }} docker push 66ba00ad3de8/docker-image-autobuild:latest  
+      run: docker login -u 66ba00ad3de8 -p ${{ secrets DOCKER_TOKEN }} && docker push 66ba00ad3de8/docker-image-autobuild:latest  
